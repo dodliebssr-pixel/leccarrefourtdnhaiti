@@ -1,25 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import salleVideo from "@/assets/videos/salle.mp4.asset.json";
-import ceremonieVideo from "@/assets/videos/ceremonie.mp4.asset.json";
-import alleesVideo from "@/assets/videos/allees.mp4.asset.json";
-import posterSalle from "@/assets/images/poster-salle.jpg.asset.json";
-import posterCeremonie from "@/assets/images/poster-ceremonie.jpg.asset.json";
-import posterAllees from "@/assets/images/poster-allees.jpg.asset.json";
-import brochure from "@/assets/images/brochure.jpg.asset.json";
-import receptionImg from "@/assets/images/reception-salle.jpg.asset.json";
-import alleeImg from "@/assets/images/allee-ceremonie.jpg.asset.json";
-import badjopImg from "@/assets/images/scene-badjop.jpg.asset.json";
-import entreeImg from "@/assets/images/belle-entree.jpg.asset.json";
-import lavandeImg from "@/assets/images/salle-lavande.jpg.asset.json";
-import edificeImg from "@/assets/images/edifice.jpg.asset.json";
-import tableImg from "@/assets/images/table-honneur.jpg.asset.json";
-import activiteImg from "@/assets/images/activite-ceremonie.jpg.asset.json";
+import salleVideo from "@/assets/videos/salle.mp4";
+import ceremonieVideo from "@/assets/videos/ceremonie.mp4";
+import alleesVideo from "@/assets/videos/allees.mp4";
+import posterSalle from "@/assets/images/poster-salle.jpg";
+import posterCeremonie from "@/assets/images/poster-ceremonie.jpg";
+import posterAllees from "@/assets/images/poster-allees.jpg";
+import brochure from "@/assets/images/brochure.jpg";
+import receptionImg from "@/assets/images/reception-salle.jpg";
+import alleeImg from "@/assets/images/allee-ceremonie.jpg";
+import badjopImg from "@/assets/images/scene-badjop.jpg";
+import entreeImg from "@/assets/images/belle-entree.jpg";
+import lavandeImg from "@/assets/images/salle-lavande.jpg";
+import edificeImg from "@/assets/images/edifice.jpg";
+import tableImg from "@/assets/images/table-honneur.jpg";
+import activiteImg from "@/assets/images/activite-ceremonie.jpg";
 
-const heroImg = receptionImg.url;
-const weddingImg = alleeImg.url;
-const meetingImg = activiteImg.url;
-const rentalImg = tableImg.url;
+const heroImg = receptionImg;
+const weddingImg = alleeImg;
+const meetingImg = activiteImg;
+const rentalImg = tableImg;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -154,7 +154,7 @@ function Index() {
               { img: weddingImg, eyebrow: "Célébrations", title: "Mariages & Fiançailles", to: "/portfolio" },
               { img: meetingImg, eyebrow: "Business", title: "Réunions & Formations", to: "/portfolio" },
               { img: rentalImg, eyebrow: "Rental", title: "Collection décoration", to: "/rental" },
-              { img: lavandeImg.url, eyebrow: "Hommage", title: "Funérailles dignes", to: "/hommage" },
+              { img: lavandeImg, eyebrow: "Hommage", title: "Funérailles dignes", to: "/hommage" },
             ].map((c, i) => (
               <motion.div
                 key={c.title}
@@ -193,11 +193,11 @@ function Index() {
           </h2>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {[
-              { img: edificeImg.url, title: "L'édifice", sub: "Accueil · Route Pillette", span: "md:col-span-2 aspect-[16/9]" },
-              { img: entreeImg.url, title: "La belle entrée", sub: "Arche & drapés", span: "aspect-[3/4]" },
-              { img: alleeImg.url, title: "L'allée d'honneur", sub: "Cérémonie", span: "aspect-[3/4]" },
-              { img: badjopImg.url, title: "La scène", sub: "Tribune & fonds décorés", span: "aspect-[4/3]" },
-              { img: tableImg.url, title: "La table d'honneur", sub: "Mise en place", span: "aspect-[4/3]" },
+              { img: edificeImg, title: "L'édifice", sub: "Accueil · Route Pillette", span: "md:col-span-2 aspect-[16/9]" },
+              { img: entreeImg, title: "La belle entrée", sub: "Arche & drapés", span: "aspect-[3/4]" },
+              { img: alleeImg, title: "L'allée d'honneur", sub: "Cérémonie", span: "aspect-[3/4]" },
+              { img: badjopImg, title: "La scène", sub: "Tribune & fonds décorés", span: "aspect-[4/3]" },
+              { img: tableImg, title: "La table d'honneur", sub: "Mise en place", span: "aspect-[4/3]" },
             ].map((s, i) => (
               <motion.figure
                 key={s.title}
@@ -234,9 +234,9 @@ function Index() {
           </h2>
           <div className="mt-14 grid gap-8 md:grid-cols-3">
             {[
-              { src: salleVideo.url, poster: posterSalle.url, title: "La salle en réception", sub: "Mise en place · Trou-du-Nord" },
-              { src: ceremonieVideo.url, poster: posterCeremonie.url, title: "Une cérémonie chez nous", sub: "Célébration · Entrée des mariés" },
-              { src: alleesVideo.url, poster: posterAllees.url, title: "Les allées", sub: "Décor & parcours des invités" },
+              { src: salleVideo, poster: posterSalle, title: "La salle en réception", sub: "Mise en place · Trou-du-Nord" },
+              { src: ceremonieVideo, poster: posterCeremonie, title: "Une cérémonie chez nous", sub: "Célébration · Entrée des mariés" },
+              { src: alleesVideo, poster: posterAllees, title: "Les allées", sub: "Décor & parcours des invités" },
             ].map((v) => (
               <motion.figure
                 key={v.title}
@@ -280,7 +280,7 @@ function Index() {
               Wi-Fi, parking, sécurité 24/24.
             </p>
             <a
-              href={brochure.url}
+              href={brochure}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex max-w-full border border-charcoal px-6 py-4 text-center text-xs uppercase tracking-[0.18em] text-charcoal transition-all hover:bg-charcoal hover:text-ivory sm:px-8 sm:tracking-[0.25em]"
@@ -289,9 +289,9 @@ function Index() {
             </a>
           </div>
           <div className="md:col-span-7">
-            <a href={brochure.url} target="_blank" rel="noopener noreferrer" className="block overflow-hidden border border-border bg-secondary">
+            <a href={brochure} target="_blank" rel="noopener noreferrer" className="block overflow-hidden border border-border bg-secondary">
               <img
-                src={brochure.url}
+                src={brochure}
                 alt="Brochure LeCarrefour — services, galerie et contacts"
                 loading="lazy"
                 className="h-full w-full object-cover"
