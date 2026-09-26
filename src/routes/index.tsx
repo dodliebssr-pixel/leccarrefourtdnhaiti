@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import salleVideo from "@/assets/videos/salle.mp4";
 import ceremonieVideo from "@/assets/videos/ceremonie.mp4";
 import alleesVideo from "@/assets/videos/allees.mp4";
+import funeraillesVideo from "@/assets/videos/RECEPTION FUNERAILLES.mp4";
 import posterSalle from "@/assets/images/poster-salle.jpg";
 import posterCeremonie from "@/assets/images/poster-ceremonie.jpg";
 import posterAllees from "@/assets/images/poster-allees.jpg";
@@ -241,6 +242,7 @@ function Index() {
               { src: salleVideo, poster: posterSalle, title: "La salle en réception", sub: "Mise en place · Trou-du-Nord" },
               { src: ceremonieVideo, poster: posterCeremonie, title: "Une cérémonie chez nous", sub: "Célébration · Entrée des mariés" },
               { src: alleesVideo, poster: posterAllees, title: "Les allées", sub: "Décor & parcours des invités" },
+              { src: funeraillesVideo, title: "Réception funéraire", sub: "Hommage · Accueil des familles" },
             ].map((v) => (
               <motion.figure
                 key={v.title}
