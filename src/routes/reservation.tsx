@@ -136,7 +136,7 @@ function Reservation() {
                 type="submit"
                 className="w-full border border-charcoal bg-charcoal px-3 py-5 text-xs uppercase tracking-[0.18em] text-ivory transition-all hover:border-gold hover:bg-gold hover:text-charcoal sm:tracking-[0.3em]"
               >
-                {done ? "Demande envoyée ✓" : `Confirmer · ${currency.symbol}${total.toLocaleString()}`}
+                {done ? "Demande envoyée ✓" : "Confirmer la demande"}
               </button>
               <p className="text-center text-[0.65rem] uppercase tracking-[0.22em] text-charcoal-soft">
                 🔒 Paiement sécurisé · Aucune somme prélevée avant validation
@@ -152,7 +152,7 @@ function Reservation() {
 
               <dl className="mt-8 space-y-4 text-sm">
                 <Row k="Événement" v={event.label} />
-                <Row k="Acompte de réservation" v={`${currency.symbol}${total.toLocaleString()} ${currency.code}`} />
+                <Row k="Acompte de réservation" v={`${currency.symbol}${total.toLocaleString("fr-FR")} ${currency.code}`} />
                 <Row k="Solde" v="À la signature du contrat" />
                 <Row k="Annulation" v="Souple jusqu'à 30j avant" />
               </dl>
