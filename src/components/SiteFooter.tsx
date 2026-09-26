@@ -46,6 +46,7 @@ export function SiteFooter() {
               ))}
               <a href="#" className="hover:text-gold">Instagram</a>
               <a href="#" className="hover:text-gold">Facebook</a>
+              <a href="https://www.facebook.com/share/16CRYLuKrCJ/" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Facebook 2</a>
             </li>
           </ul>
         </div>

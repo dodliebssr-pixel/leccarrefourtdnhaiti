@@ -85,6 +85,7 @@ function Contact() {
             <div className="flex flex-wrap gap-4 text-sm">
               <a href="#" className="hover:text-gold">Instagram</a>
               <a href="#" className="hover:text-gold">Facebook</a>
+              <a href="https://www.facebook.com/share/16CRYLuKrCJ/" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Facebook 2</a>
               <a href="#" className="hover:text-gold">TikTok</a>
               <a href={`https://wa.me/50933198844?text=${WHATSAPP_MESSAGE}`} target="_blank" rel="noopener noreferrer" className="hover:text-gold">WhatsApp</a>
             </div>
