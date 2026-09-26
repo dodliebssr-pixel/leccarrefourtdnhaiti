@@ -15,6 +15,8 @@ import lavandeImg from "@/assets/images/salle-lavande.jpg";
 import edificeImg from "@/assets/images/edifice.jpg";
 import tableImg from "@/assets/images/table-honneur.jpg";
 import activiteImg from "@/assets/images/activite-ceremonie.jpg";
+import decorationImg from "@/assets/images/DECRRATII.jpeg";
+import graduationImg from "@/assets/images/Graduation Lecarrefour foto.jpeg";
 
 const heroImg = receptionImg;
 const weddingImg = alleeImg;
@@ -198,6 +200,8 @@ function Index() {
               { img: alleeImg, title: "L'allée d'honneur", sub: "Cérémonie", span: "aspect-[3/4]" },
               { img: badjopImg, title: "La scène", sub: "Tribune & fonds décorés", span: "aspect-[4/3]" },
               { img: tableImg, title: "La table d'honneur", sub: "Mise en place", span: "aspect-[4/3]" },
+              { img: decorationImg, title: "Décoration de salle", sub: "Ambiance & réception", span: "aspect-[4/3]" },
+              { img: graduationImg, title: "Cérémonie de graduation", sub: "Célébration & remise des diplômes", span: "md:col-span-2 aspect-[16/9]" },
             ].map((s, i) => (
               <motion.figure
                 key={s.title}
