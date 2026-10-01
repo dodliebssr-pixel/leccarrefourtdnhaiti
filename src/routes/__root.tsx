@@ -14,7 +14,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import { WhatsAppFab } from "../components/WhatsAppFab";
-import { SiteAnalytics } from "../components/SiteAnalytics";
 
 function NotFoundComponent() {
   return (
@@ -117,18 +116,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const pathname = useRouterState({ select: (state) => state.location.pathname });
-  const isAdminRoute = pathname.startsWith("/admin");
-
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteAnalytics />
-      {!isAdminRoute && <SiteHeader />}
-      <main className={isAdminRoute ? "min-h-screen" : "min-h-screen w-full max-w-[100vw] overflow-x-hidden"}>
+      <SiteHeader />
+      <main className="min-h-screen w-full max-w-[100vw] overflow-x-hidden">
         <Outlet />
       </main>
-      {!isAdminRoute && <SiteFooter />}
-      {!isAdminRoute && <WhatsAppFab />}
+      <SiteFooter />
+      <WhatsAppFab />
     </QueryClientProvider>
   );
 }
