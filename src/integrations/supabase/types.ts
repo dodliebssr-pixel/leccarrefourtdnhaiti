@@ -20,7 +20,26 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_admin_site_stats: {
+        Args: { p_from: string; p_to: string }
+        Returns: Json
+      }
+      track_analytics_event: {
+        Args: {
+          p_event: string
+          p_visitor_id: string
+          p_session_id: string
+          p_path: string
+          p_referrer_host: string | null
+          p_device_type: string
+          p_browser: string
+          p_operating_system: string
+          p_traffic_source: string
+          p_country?: string | null
+          p_city?: string | null
+        }
+        Returns: undefined
+      }
     }
     Enums: {
       [_ in never]: never
